@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoleadaBet &mdash; Painel do jogador</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body class="dashboard-page">
+    <header class="dashboard-header">
+      <div class="container dashboard-header__top">
+        <div class="logo">Goleada<span>Bet</span></div>
+        <form class="dashboard-search" role="search">
+          <label for="global-search" class="sr-only">Buscar eventos</label>
+          <span aria-hidden="true" class="search-icon">🔍</span>
+          <input
+            id="global-search"
+            type="search"
+            placeholder="Buscar campeonatos, times ou mercados"
+          />
+        </form>
+        <div class="header-widgets">
+          <div class="balance-card">
+            <span class="balance-label">Saldo disponível</span>
+            <strong class="balance-amount">R$ 1.275,00</strong>
+          </div>
+          <button class="btn primary small">Depositar</button>
+          <button class="btn ghost small">Sacar</button>
+          <div class="user-chip">
+            <span class="user-avatar" aria-hidden="true">LV</span>
+            <div>
+              <strong class="user-name">Lucas Vieira</strong>
+              <span class="user-tier">VIP Nível 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard-header__nav">
+        <div class="container dashboard-header__nav-inner">
+          <nav class="category-scroll" aria-label="Navegação principal">
+            <button class="category-button active" type="button">Início</button>
+            <button class="category-button" type="button">Ao vivo</button>
+            <button class="category-button" type="button">Futebol</button>
+            <button class="category-button" type="button">Basquete</button>
+            <button class="category-button" type="button">Tênis</button>
+            <button class="category-button" type="button">Esports</button>
+            <button class="category-button" type="button">Boost de Odds</button>
+            <button class="category-button" type="button">Promoções</button>
+            <button class="category-button" type="button">Resultados</button>
+          </nav>
+          <div class="live-ticker" role="status">
+            <span class="ticker-label">Próximo destaque</span>
+            <span class="ticker-match">Libertadores: Fluminense x Boca Juniors em 18 min</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="dashboard-main">
+      <div class="container dashboard-grid">
+        <aside class="dashboard-sidebar" aria-label="Listas de esportes e campeonatos">
+          <section class="sidebar-card panel">
+            <header class="sidebar-card__header">
+              <h2>Favoritos</h2>
+              <button class="link-button" type="button">Gerenciar</button>
+            </header>
+            <ul class="sidebar-list">
+              <li>
+                <span>Brasileirão Série A</span>
+                <span class="sidebar-pill live">AO VIVO</span>
+              </li>
+              <li>
+                <span>Champions League</span>
+                <span class="sidebar-pill">+21</span>
+              </li>
+              <li>
+                <span>NBA</span>
+                <span class="sidebar-pill">Playoffs</span>
+              </li>
+              <li>
+                <span>Premier League</span>
+                <span class="sidebar-pill">19:00</span>
+              </li>
+              <li>
+                <span>Libertadores</span>
+                <span class="sidebar-pill">Hoje</span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="sidebar-card panel">
+            <header class="sidebar-card__header">
+              <h2>Campeonatos populares</h2>
+              <button class="link-button" type="button">Ver todos</button>
+            </header>
+            <ul class="sidebar-list secondary">
+              <li>La Liga</li>
+              <li>Serie A Italiana</li>
+              <li>Copa do Nordeste</li>
+              <li>Liga dos Campeões da Ásia</li>
+              <li>CBLOL</li>
+              <li>ATP Masters 1000</li>
+            </ul>
+          </section>
+
+          <section class="sidebar-card panel">
+            <header class="sidebar-card__header">
+              <h2>Mercados rápidos</h2>
+            </header>
+            <div class="quick-markets">
+              <button class="quick-market" type="button">Ambos marcam</button>
+              <button class="quick-market" type="button">Handicap -1.5</button>
+              <button class="quick-market" type="button">Mais de 2.5 gols</button>
+              <button class="quick-market" type="button">Primeiro tempo</button>
+              <button class="quick-market" type="button">Cartões &gt; 4.5</button>
+            </div>
+          </section>
+        </aside>
+
+        <div class="dashboard-content">
+          <section class="featured-live panel" data-animate="fade-up">
+            <div class="featured-live__info">
+              <span class="pill pill-live">Libertadores &bull; Ao vivo</span>
+              <h1>Fluminense x Boca Juniors</h1>
+              <p>
+                Final eletrizante no Maracanã. O Tricolor pressiona buscando a virada
+                enquanto o Boca se fecha para segurar a vantagem mínima.
+              </p>
+              <div class="scoreboard">
+                <div class="scoreboard-team">
+                  <span class="team-name">Fluminense</span>
+                  <strong class="team-score">1</strong>
+                </div>
+                <div class="scoreboard-status">
+                  <span class="status-minute">72'</span>
+                  <span class="status-period">2º tempo</span>
+                </div>
+                <div class="scoreboard-team">
+                  <span class="team-name">Boca Juniors</span>
+                  <strong class="team-score">2</strong>
+                </div>
+              </div>
+              <div class="featured-actions">
+                <button class="btn primary">Adicionar ao bilhete</button>
+                <button class="btn ghost">Assistir transmissão</button>
+              </div>
+            </div>
+            <div class="featured-live__markets">
+              <div class="market-block">
+                <span class="market-label">Resultado final</span>
+                <div class="market-options">
+                  <button class="odd-pill" type="button">1.92</button>
+                  <button class="odd-pill" type="button">3.25</button>
+                  <button class="odd-pill" type="button">4.10</button>
+                </div>
+              </div>
+              <div class="market-block">
+                <span class="market-label">Próximo gol</span>
+                <div class="market-options">
+                  <button class="odd-pill" type="button">Fluminense 2.30</button>
+                  <button class="odd-pill" type="button">Boca 3.05</button>
+                  <button class="odd-pill" type="button">Sem gol 3.60</button>
+                </div>
+              </div>
+              <div class="market-block">
+                <span class="market-label">Linha de gols</span>
+                <div class="market-options">
+                  <button class="odd-pill" type="button">Mais de 3.5 &mdash; 2.65</button>
+                  <button class="odd-pill" type="button">Menos de 3.5 &mdash; 1.48</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="event-group panel" aria-labelledby="ao-vivo-agora">
+            <header class="group-header">
+              <div>
+                <h2 id="ao-vivo-agora">Ao vivo agora</h2>
+                <p>Atualizado em tempo real com cashout inteligente.</p>
+              </div>
+              <button class="link-button" type="button">Ver todos os eventos</button>
+            </header>
+            <div class="event-table" role="list">
+              <article class="event-row" role="listitem">
+                <div class="event-league">
+                  <span>Brasileirão Série A</span>
+                  <span class="event-minute">68'</span>
+                </div>
+                <div class="event-teams">
+                  <span>Fortaleza</span>
+                  <span class="event-score">1 &ndash; 0</span>
+                  <span>Internacional</span>
+                </div>
+                <div class="event-odds">
+                  <button class="odd-button" type="button">1.90</button>
+                  <button class="odd-button" type="button">3.45</button>
+                  <button class="odd-button" type="button">5.10</button>
+                </div>
+                <div class="event-extra">
+                  <span>+124 mercados</span>
+                </div>
+              </article>
+              <article class="event-row" role="listitem">
+                <div class="event-league">
+                  <span>NBA &bull; Playoffs</span>
+                  <span class="event-minute">Q4 04:12</span>
+                </div>
+                <div class="event-teams">
+                  <span>Lakers</span>
+                  <span class="event-score">102 &ndash; 98</span>
+                  <span>Warriors</span>
+                </div>
+                <div class="event-odds">
+                  <button class="odd-button" type="button">1.65</button>
+                  <button class="odd-button" type="button">12.50</button>
+                  <button class="odd-button" type="button">2.45</button>
+                </div>
+                <div class="event-extra">
+                  <span>Cashout Rápido</span>
+                </div>
+              </article>
+              <article class="event-row" role="listitem">
+                <div class="event-league">
+                  <span>ATP Madrid</span>
+                  <span class="event-minute">Set 3</span>
+                </div>
+                <div class="event-teams">
+                  <span>C. Alcaraz</span>
+                  <span class="event-score">6 &ndash; 4 &ndash; 5</span>
+                  <span>J. Sinner</span>
+                </div>
+                <div class="event-odds">
+                  <button class="odd-button" type="button">1.55</button>
+                  <button class="odd-button" type="button">2.55</button>
+                </div>
+                <div class="event-extra">
+                  <span>Tiebreak ativo</span>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="event-group panel" aria-labelledby="boosts-dia">
+            <header class="group-header">
+              <div>
+                <h2 id="boosts-dia">Boosts do dia</h2>
+                <p>Odds turbinadas para slips selecionados.</p>
+              </div>
+              <button class="link-button" type="button">Termos</button>
+            </header>
+            <div class="boost-grid">
+              <article class="boost-card" data-animate="fade-up">
+                <span class="boost-label">+35%</span>
+                <h3>City vence + Haaland marca</h3>
+                <p>Odds aumentadas por tempo limitado para novos bilhetes simples.</p>
+                <div class="boost-odds">
+                  <span class="old-odds">2.10</span>
+                  <span class="new-odds">2.84</span>
+                </div>
+                <button class="btn primary small" type="button">Adicionar</button>
+              </article>
+              <article class="boost-card" data-animate="fade-up">
+                <span class="boost-label">+50%</span>
+                <h3>Real Madrid + Mais de 2.5</h3>
+                <p>Parlay exclusivo disponível até o início da partida.</p>
+                <div class="boost-odds">
+                  <span class="old-odds">3.40</span>
+                  <span class="new-odds">5.10</span>
+                </div>
+                <button class="btn primary small" type="button">Adicionar</button>
+              </article>
+              <article class="boost-card" data-animate="fade-up">
+                <span class="boost-label">+20%</span>
+                <h3>Vitória do Flamengo</h3>
+                <p>Válido para apostas simples até R$ 50 com cashout habilitado.</p>
+                <div class="boost-odds">
+                  <span class="old-odds">1.80</span>
+                  <span class="new-odds">2.16</span>
+                </div>
+                <button class="btn primary small" type="button">Adicionar</button>
+              </article>
+            </div>
+          </section>
+
+          <section class="event-group panel" aria-labelledby="agenda-dia">
+            <header class="group-header">
+              <div>
+                <h2 id="agenda-dia">Agenda do dia</h2>
+                <p>Não perca as partidas que você acompanha.</p>
+              </div>
+              <button class="link-button" type="button">Exportar</button>
+            </header>
+            <ul class="upcoming-list">
+              <li>
+                <div>
+                  <span class="upcoming-time">18:00</span>
+                  <strong>Palmeiras x São Paulo</strong>
+                  <span class="upcoming-league">Copa do Brasil &bull; Quartas</span>
+                </div>
+                <button class="odd-pill" type="button">Ver mercados</button>
+              </li>
+              <li>
+                <div>
+                  <span class="upcoming-time">19:30</span>
+                  <strong>Boston Celtics x Miami Heat</strong>
+                  <span class="upcoming-league">NBA &bull; Jogo 5</span>
+                </div>
+                <button class="odd-pill" type="button">Adicionar ao bilhete</button>
+              </li>
+              <li>
+                <div>
+                  <span class="upcoming-time">21:00</span>
+                  <strong>River Plate x Nacional</strong>
+                  <span class="upcoming-league">Libertadores &bull; Grupo D</span>
+                </div>
+                <button class="odd-pill" type="button">Pré-live</button>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <aside class="dashboard-right" aria-label="Resumo da conta e bilhete">
+          <section class="betslip panel" aria-labelledby="bilhete-titulo">
+            <header class="betslip-header">
+              <h2 id="bilhete-titulo">Bilhete rápido</h2>
+              <span class="betslip-count">2 seleções</span>
+            </header>
+            <div class="betslip-selections">
+              <article class="selection">
+                <div>
+                  <span class="selection-league">Brasileirão Série B</span>
+                  <strong class="selection-match">Sport x Ceará</strong>
+                  <span class="selection-market">Vitória do Sport</span>
+                </div>
+                <button class="remove-selection" type="button" aria-label="Remover seleção">&times;</button>
+              </article>
+              <article class="selection">
+                <div>
+                  <span class="selection-league">Premier League</span>
+                  <strong class="selection-match">Arsenal x Newcastle</strong>
+                  <span class="selection-market">Mais de 2.5 gols</span>
+                </div>
+                <button class="remove-selection" type="button" aria-label="Remover seleção">&times;</button>
+              </article>
+            </div>
+            <div class="betslip-stake">
+              <label for="stake" class="stake-label">Valor da aposta</label>
+              <div class="stake-control">
+                <button type="button" class="stake-adjust">-</button>
+                <input id="stake" type="number" value="50" min="10" step="10" />
+                <button type="button" class="stake-adjust">+</button>
+              </div>
+              <div class="stake-summary">
+                <div>
+                  <span>Retorno potencial</span>
+                  <strong>R$ 612,50</strong>
+                </div>
+                <div>
+                  <span>Cashout disponível</span>
+                  <strong>R$ 128,40</strong>
+                </div>
+              </div>
+              <button class="btn primary full" type="button">Confirmar aposta</button>
+            </div>
+          </section>
+
+          <section class="account panel">
+            <h2>Resumo da conta</h2>
+            <dl class="account-stats">
+              <div>
+                <dt>Vencidas hoje</dt>
+                <dd>7</dd>
+              </div>
+              <div>
+                <dt>Apostas abertas</dt>
+                <dd>4</dd>
+              </div>
+              <div>
+                <dt>Cashout realizados</dt>
+                <dd>2</dd>
+              </div>
+            </dl>
+            <a class="link-button" href="#">Ver extrato completo</a>
+          </section>
+
+          <section class="support panel">
+            <h2>Suporte dedicado</h2>
+            <p>Estamos online 24 horas para tirar dúvidas e acompanhar suas apostas.</p>
+            <div class="support-actions">
+              <button class="btn primary small" type="button">Abrir chat</button>
+              <button class="btn ghost small" type="button">Central de ajuda</button>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
