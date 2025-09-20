@@ -4,15 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoleadaBet &mdash; Painel do jogador</title>
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -30,7 +23,7 @@
           <input
             id="global-search"
             type="search"
-            placeholder="Buscar campeonatos, times ou mercados"
+            placeholder="Busque eventos, ligas ou times"
           />
         </form>
         <div class="header-widgets">
@@ -38,8 +31,8 @@
             <span class="balance-label">Saldo disponível</span>
             <strong class="balance-amount">R$ 1.275,00</strong>
           </div>
-          <button class="btn primary small">Depositar</button>
-          <button class="btn ghost small">Sacar</button>
+          <button class="btn primary small" type="button">Depositar</button>
+          <button class="btn ghost small" type="button">Sacar</button>
           <div class="user-chip">
             <span class="user-avatar" aria-hidden="true">LV</span>
             <div>
@@ -58,351 +51,500 @@
             <button class="category-button" type="button">Basquete</button>
             <button class="category-button" type="button">Tênis</button>
             <button class="category-button" type="button">Esports</button>
-            <button class="category-button" type="button">Boost de Odds</button>
             <button class="category-button" type="button">Promoções</button>
             <button class="category-button" type="button">Resultados</button>
           </nav>
           <div class="live-ticker" role="status">
-            <span class="ticker-label">Próximo destaque</span>
-            <span class="ticker-match">Libertadores: Fluminense x Boca Juniors em 18 min</span>
+            <span class="ticker-label">Começa em 12 min</span>
+            <span class="ticker-match">Champions: Real Madrid x Manchester City</span>
           </div>
         </div>
       </div>
     </header>
 
     <main class="dashboard-main">
-      <div class="container dashboard-grid">
-        <aside class="dashboard-sidebar" aria-label="Listas de esportes e campeonatos">
-          <section class="sidebar-card panel">
-            <header class="sidebar-card__header">
-              <h2>Favoritos</h2>
-              <button class="link-button" type="button">Gerenciar</button>
+      <div class="container dashboard-shell">
+        <aside class="shell-left" aria-label="Navegação por esportes">
+          <section class="panel side-panel">
+            <header>
+              <h2>Acesso rápido</h2>
             </header>
-            <ul class="sidebar-list">
+            <form class="side-search" role="search">
+              <label for="sidebar-search" class="sr-only">Buscar ligas ou equipes</label>
+              <span class="side-search__icon" aria-hidden="true">🔎</span>
+              <input
+                id="sidebar-search"
+                type="search"
+                placeholder="Buscar ligas ou equipes"
+              />
+            </form>
+            <div class="chip-group" aria-label="Filtros rápidos">
+              <button class="chip active" type="button">Ao vivo</button>
+              <button class="chip" type="button">Próximas 3h</button>
+              <button class="chip" type="button">Cashout</button>
+              <button class="chip" type="button">Boosts</button>
+              <button class="chip" type="button">Favoritos</button>
+            </div>
+            <ul class="favorite-list">
               <li>
-                <span>Brasileirão Série A</span>
-                <span class="sidebar-pill live">AO VIVO</span>
-              </li>
-              <li>
-                <span>Champions League</span>
-                <span class="sidebar-pill">+21</span>
-              </li>
-              <li>
-                <span>NBA</span>
-                <span class="sidebar-pill">Playoffs</span>
+                <span>Libertadores</span>
+                <span class="tag live">ao vivo</span>
               </li>
               <li>
                 <span>Premier League</span>
-                <span class="sidebar-pill">19:00</span>
+                <span class="tag soon">19h</span>
               </li>
               <li>
-                <span>Libertadores</span>
-                <span class="sidebar-pill">Hoje</span>
+                <span>NBA Playoffs</span>
+                <span class="tag soon">22h</span>
               </li>
             </ul>
           </section>
 
-          <section class="sidebar-card panel">
-            <header class="sidebar-card__header">
-              <h2>Campeonatos populares</h2>
-              <button class="link-button" type="button">Ver todos</button>
+          <section class="panel side-panel">
+            <header class="side-panel__header">
+              <h2>Esportes &amp; ligas</h2>
+              <button class="link-button" type="button">Gerenciar favoritos</button>
             </header>
-            <ul class="sidebar-list secondary">
-              <li>La Liga</li>
-              <li>Serie A Italiana</li>
-              <li>Copa do Nordeste</li>
-              <li>Liga dos Campeões da Ásia</li>
-              <li>CBLOL</li>
-              <li>ATP Masters 1000</li>
-            </ul>
-          </section>
+            <div class="sports-accordion">
+              <details class="accordion-item" open>
+                <summary>
+                  <div class="accordion-title">
+                    <span class="accordion-icon" aria-hidden="true">⚽</span>
+                    <span>Futebol</span>
+                  </div>
+                  <span class="accordion-badge">128</span>
+                </summary>
+                <ul>
+                  <li>
+                    <span>Brasileirão Série A</span>
+                    <span class="tag live">ao vivo 6</span>
+                  </li>
+                  <li>
+                    <span>Champions League</span>
+                    <span class="tag soon">21h</span>
+                  </li>
+                  <li>
+                    <span>Premier League</span>
+                    <span class="tag soon">amanhã</span>
+                  </li>
+                  <li>
+                    <span>La Liga</span>
+                    <span class="tag soon">+8</span>
+                  </li>
+                </ul>
+              </details>
 
-          <section class="sidebar-card panel">
-            <header class="sidebar-card__header">
-              <h2>Mercados rápidos</h2>
-            </header>
-            <div class="quick-markets">
-              <button class="quick-market" type="button">Ambos marcam</button>
-              <button class="quick-market" type="button">Handicap -1.5</button>
-              <button class="quick-market" type="button">Mais de 2.5 gols</button>
-              <button class="quick-market" type="button">Primeiro tempo</button>
-              <button class="quick-market" type="button">Cartões &gt; 4.5</button>
+              <details class="accordion-item" open>
+                <summary>
+                  <div class="accordion-title">
+                    <span class="accordion-icon" aria-hidden="true">🏀</span>
+                    <span>Basquete</span>
+                  </div>
+                  <span class="accordion-badge">52</span>
+                </summary>
+                <ul>
+                  <li>
+                    <span>NBA</span>
+                    <span class="tag live">ao vivo 2</span>
+                  </li>
+                  <li>
+                    <span>EuroLeague</span>
+                    <span class="tag soon">18h</span>
+                  </li>
+                  <li>
+                    <span>NBB</span>
+                    <span class="tag soon">+5</span>
+                  </li>
+                </ul>
+              </details>
+
+              <details class="accordion-item">
+                <summary>
+                  <div class="accordion-title">
+                    <span class="accordion-icon" aria-hidden="true">🎾</span>
+                    <span>Tênis</span>
+                  </div>
+                  <span class="accordion-badge">34</span>
+                </summary>
+                <ul>
+                  <li>
+                    <span>ATP Masters 1000</span>
+                    <span class="tag soon">quartas</span>
+                  </li>
+                  <li>
+                    <span>WTA Tour</span>
+                    <span class="tag soon">+9</span>
+                  </li>
+                </ul>
+              </details>
+
+              <details class="accordion-item">
+                <summary>
+                  <div class="accordion-title">
+                    <span class="accordion-icon" aria-hidden="true">🎮</span>
+                    <span>Esports</span>
+                  </div>
+                  <span class="accordion-badge">26</span>
+                </summary>
+                <ul>
+                  <li>
+                    <span>CBLOL</span>
+                    <span class="tag live">ao vivo</span>
+                  </li>
+                  <li>
+                    <span>Valorant Challengers</span>
+                    <span class="tag soon">17h</span>
+                  </li>
+                  <li>
+                    <span>CS:GO Pro League</span>
+                    <span class="tag soon">+3</span>
+                  </li>
+                </ul>
+              </details>
+
+              <details class="accordion-item">
+                <summary>
+                  <div class="accordion-title">
+                    <span class="accordion-icon" aria-hidden="true">🏐</span>
+                    <span>Vôlei</span>
+                  </div>
+                  <span class="accordion-badge">18</span>
+                </summary>
+                <ul>
+                  <li>
+                    <span>Superliga</span>
+                    <span class="tag soon">amanhã</span>
+                  </li>
+                  <li>
+                    <span>Liga das Nações</span>
+                    <span class="tag soon">+4</span>
+                  </li>
+                </ul>
+              </details>
             </div>
           </section>
         </aside>
 
-        <div class="dashboard-content">
-          <section class="featured-live panel" data-animate="fade-up">
-            <div class="featured-live__info">
-              <span class="pill pill-live">Libertadores &bull; Ao vivo</span>
-              <h1>Fluminense x Boca Juniors</h1>
-              <p>
-                Final eletrizante no Maracanã. O Tricolor pressiona buscando a virada
-                enquanto o Boca se fecha para segurar a vantagem mínima.
-              </p>
-              <div class="scoreboard">
-                <div class="scoreboard-team">
-                  <span class="team-name">Fluminense</span>
-                  <strong class="team-score">1</strong>
-                </div>
-                <div class="scoreboard-status">
-                  <span class="status-minute">72'</span>
-                  <span class="status-period">2º tempo</span>
-                </div>
-                <div class="scoreboard-team">
-                  <span class="team-name">Boca Juniors</span>
-                  <strong class="team-score">2</strong>
-                </div>
+        <div class="shell-center" role="region" aria-label="Conteúdo principal">
+          <section
+            class="panel hero-banner"
+            style="--hero-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80');"
+          >
+            <span class="section-badge">Playoffs NBA • Ao vivo</span>
+            <h1>Boston Celtics x Miami Heat</h1>
+            <p>
+              Jogo 5 eletrizante no TD Garden. Os Celtics lideram por três pontos, mas o Miami
+              começa o último período com sequência de bolas de três. Aproveite o cashout inteligente
+              e as odds turbinadas.
+            </p>
+            <div class="hero-meta">
+              <span class="tag live">Q4 • 07:42</span>
+              <span>Transmissão disponível em HD</span>
+            </div>
+            <div class="hero-score">
+              <div class="hero-team">
+                <span>Boston Celtics</span>
+                <strong>102</strong>
               </div>
-              <div class="featured-actions">
-                <button class="btn primary">Adicionar ao bilhete</button>
-                <button class="btn ghost">Assistir transmissão</button>
+              <div class="hero-status">
+                <span>quarto período</span>
+                <span>tempo pedido</span>
+              </div>
+              <div class="hero-team hero-team--right">
+                <span>Miami Heat</span>
+                <strong>99</strong>
               </div>
             </div>
-            <div class="featured-live__markets">
-              <div class="market-block">
-                <span class="market-label">Resultado final</span>
-                <div class="market-options">
-                  <button class="odd-pill" type="button">1.92</button>
-                  <button class="odd-pill" type="button">3.25</button>
-                  <button class="odd-pill" type="button">4.10</button>
+            <div class="hero-markets">
+              <div class="hero-market">
+                <span class="hero-market__label">Resultado</span>
+                <div class="hero-market__odds">
+                  <button class="odd-chip" type="button">Celtics 1.65</button>
+                  <button class="odd-chip" type="button">Heat 2.45</button>
                 </div>
               </div>
-              <div class="market-block">
-                <span class="market-label">Próximo gol</span>
-                <div class="market-options">
-                  <button class="odd-pill" type="button">Fluminense 2.30</button>
-                  <button class="odd-pill" type="button">Boca 3.05</button>
-                  <button class="odd-pill" type="button">Sem gol 3.60</button>
+              <div class="hero-market">
+                <span class="hero-market__label">Total de pontos</span>
+                <div class="hero-market__odds">
+                  <button class="odd-chip" type="button">Mais de 212.5 • 1.90</button>
+                  <button class="odd-chip" type="button">Menos de 212.5 • 1.80</button>
                 </div>
               </div>
-              <div class="market-block">
-                <span class="market-label">Linha de gols</span>
-                <div class="market-options">
-                  <button class="odd-pill" type="button">Mais de 3.5 &mdash; 2.65</button>
-                  <button class="odd-pill" type="button">Menos de 3.5 &mdash; 1.48</button>
+              <div class="hero-market">
+                <span class="hero-market__label">Jogador destaque</span>
+                <div class="hero-market__odds">
+                  <button class="odd-chip" type="button">Tatum +30 pts • 2.80</button>
+                  <button class="odd-chip" type="button">Butler duplo-duplo • 3.10</button>
                 </div>
               </div>
+            </div>
+            <div class="hero-actions">
+              <button class="btn primary" type="button">Adicionar ao bilhete</button>
+              <button class="btn ghost" type="button">Ver estatísticas avançadas</button>
             </div>
           </section>
 
-          <section class="event-group panel" aria-labelledby="ao-vivo-agora">
-            <header class="group-header">
+          <section class="panel dashboard-section explosive-odds" data-animate="fade-up">
+            <header class="dashboard-section__header">
               <div>
-                <h2 id="ao-vivo-agora">Ao vivo agora</h2>
-                <p>Atualizado em tempo real com cashout inteligente.</p>
+                <h2>Odds explosivas</h2>
+                <p>Seleções com boosts exclusivos para multiplicar seus ganhos hoje.</p>
               </div>
-              <button class="link-button" type="button">Ver todos os eventos</button>
+              <button class="link-button" type="button">Ver todas as promoções</button>
             </header>
-            <div class="event-table" role="list">
-              <article class="event-row" role="listitem">
-                <div class="event-league">
-                  <span>Brasileirão Série A</span>
-                  <span class="event-minute">68'</span>
+            <div class="odds-grid">
+              <article class="odd-card" data-animate="fade-up">
+                <div class="odd-card__meta">
+                  <span>Libertadores</span>
+                  <span>Começa 21h</span>
                 </div>
-                <div class="event-teams">
-                  <span>Fortaleza</span>
-                  <span class="event-score">1 &ndash; 0</span>
-                  <span>Internacional</span>
+                <div class="odd-card__teams">
+                  <span>Fluminense</span>
+                  <span>vs</span>
+                  <span>Boca Juniors</span>
                 </div>
-                <div class="event-odds">
-                  <button class="odd-button" type="button">1.90</button>
-                  <button class="odd-button" type="button">3.45</button>
-                  <button class="odd-button" type="button">5.10</button>
+                <div class="odd-card__markets">
+                  <span class="odd-card__label">Resultado combinado</span>
+                  <div class="odd-card__odds">
+                    <button class="odd-chip" type="button">Flu vence + ambos marcam • 4.60</button>
+                    <button class="odd-chip" type="button">Boca + menos de 2.5 • 5.20</button>
+                  </div>
                 </div>
-                <div class="event-extra">
-                  <span>+124 mercados</span>
-                </div>
-              </article>
-              <article class="event-row" role="listitem">
-                <div class="event-league">
-                  <span>NBA &bull; Playoffs</span>
-                  <span class="event-minute">Q4 04:12</span>
-                </div>
-                <div class="event-teams">
-                  <span>Lakers</span>
-                  <span class="event-score">102 &ndash; 98</span>
-                  <span>Warriors</span>
-                </div>
-                <div class="event-odds">
-                  <button class="odd-button" type="button">1.65</button>
-                  <button class="odd-button" type="button">12.50</button>
-                  <button class="odd-button" type="button">2.45</button>
-                </div>
-                <div class="event-extra">
-                  <span>Cashout Rápido</span>
+                <div class="odd-card__footer">
+                  <span class="tag boost">boost +35%</span>
+                  <button class="btn primary small" type="button">Adicionar</button>
                 </div>
               </article>
-              <article class="event-row" role="listitem">
-                <div class="event-league">
+
+              <article class="odd-card" data-animate="fade-up">
+                <div class="odd-card__meta">
+                  <span>Premier League</span>
+                  <span>13 maio</span>
+                </div>
+                <div class="odd-card__teams">
+                  <span>Arsenal</span>
+                  <span>vs</span>
+                  <span>Manchester City</span>
+                </div>
+                <div class="odd-card__markets">
+                  <span class="odd-card__label">Mercados especiais</span>
+                  <div class="odd-card__odds">
+                    <button class="odd-chip" type="button">Arsenal +2 escanteios • 3.10</button>
+                    <button class="odd-chip" type="button">City vence virada • 8.20</button>
+                  </div>
+                </div>
+                <div class="odd-card__footer">
+                  <span class="tag boost">cashout turbo</span>
+                  <button class="btn ghost small" type="button">Detalhes</button>
+                </div>
+              </article>
+
+              <article class="odd-card" data-animate="fade-up">
+                <div class="odd-card__meta">
+                  <span>CBLOL</span>
+                  <span>Bo5 decisivo</span>
+                </div>
+                <div class="odd-card__teams">
+                  <span>LOUD</span>
+                  <span>vs</span>
+                  <span>paiN Gaming</span>
+                </div>
+                <div class="odd-card__markets">
+                  <span class="odd-card__label">Mapa vencedor</span>
+                  <div class="odd-card__odds">
+                    <button class="odd-chip" type="button">LOUD 3x1 • 3.90</button>
+                    <button class="odd-chip" type="button">paiN 3x2 • 5.60</button>
+                  </div>
+                </div>
+                <div class="odd-card__footer">
+                  <span class="tag boost">freebet 20%</span>
+                  <button class="btn primary small" type="button">Aproveitar</button>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel dashboard-section live-now" data-animate="fade-up">
+            <header class="dashboard-section__header">
+              <div>
+                <h2>Ao vivo agora</h2>
+                <p>Acompanhe partidas com streaming e cashout instantâneo.</p>
+              </div>
+              <button class="link-button" type="button">Ver mais ao vivo</button>
+            </header>
+            <div class="live-strip">
+              <article class="live-card">
+                <div class="live-card__header">
+                  <span>Brasileirão</span>
+                  <span class="tag live">58'</span>
+                </div>
+                <div class="live-card__teams">
+                  <span>Palmeiras</span>
+                  <span>vs</span>
+                  <span>Grêmio</span>
+                </div>
+                <div class="live-card__score">
+                  <strong>2 x 1</strong>
+                  <span>Escanteios 6-3</span>
+                </div>
+                <div class="live-card__odds">
+                  <button class="odd-chip" type="button">Palmeiras 1.42</button>
+                  <button class="odd-chip" type="button">Grêmio 6.80</button>
+                  <button class="odd-chip" type="button">Próximo gol Verdão • 2.10</button>
+                </div>
+              </article>
+
+              <article class="live-card">
+                <div class="live-card__header">
+                  <span>Serie A</span>
+                  <span class="tag live">72'</span>
+                </div>
+                <div class="live-card__teams">
+                  <span>Inter de Milão</span>
+                  <span>vs</span>
+                  <span>Roma</span>
+                </div>
+                <div class="live-card__score">
+                  <strong>1 x 1</strong>
+                  <span>Finalizações 9-5</span>
+                </div>
+                <div class="live-card__odds">
+                  <button class="odd-chip" type="button">Inter 2.05</button>
+                  <button class="odd-chip" type="button">Roma 3.90</button>
+                  <button class="odd-chip" type="button">Empate 1.95</button>
+                </div>
+              </article>
+
+              <article class="live-card">
+                <div class="live-card__header">
                   <span>ATP Madrid</span>
-                  <span class="event-minute">Set 3</span>
+                  <span class="tag live">Set 3</span>
                 </div>
-                <div class="event-teams">
-                  <span>C. Alcaraz</span>
-                  <span class="event-score">6 &ndash; 4 &ndash; 5</span>
-                  <span>J. Sinner</span>
+                <div class="live-card__teams">
+                  <span>Alcaraz</span>
+                  <span>vs</span>
+                  <span>Rune</span>
                 </div>
-                <div class="event-odds">
-                  <button class="odd-button" type="button">1.55</button>
-                  <button class="odd-button" type="button">2.55</button>
+                <div class="live-card__score">
+                  <strong>6-7 / 6-4 / 3-2</strong>
+                  <span>Saques 7 aces</span>
                 </div>
-                <div class="event-extra">
-                  <span>Tiebreak ativo</span>
+                <div class="live-card__odds">
+                  <button class="odd-chip" type="button">Alcaraz 1.70</button>
+                  <button class="odd-chip" type="button">Rune 2.20</button>
                 </div>
               </article>
             </div>
-          </section>
-
-          <section class="event-group panel" aria-labelledby="boosts-dia">
-            <header class="group-header">
-              <div>
-                <h2 id="boosts-dia">Boosts do dia</h2>
-                <p>Odds turbinadas para slips selecionados.</p>
-              </div>
-              <button class="link-button" type="button">Termos</button>
-            </header>
-            <div class="boost-grid">
-              <article class="boost-card" data-animate="fade-up">
-                <span class="boost-label">+35%</span>
-                <h3>City vence + Haaland marca</h3>
-                <p>Odds aumentadas por tempo limitado para novos bilhetes simples.</p>
-                <div class="boost-odds">
-                  <span class="old-odds">2.10</span>
-                  <span class="new-odds">2.84</span>
-                </div>
-                <button class="btn primary small" type="button">Adicionar</button>
-              </article>
-              <article class="boost-card" data-animate="fade-up">
-                <span class="boost-label">+50%</span>
-                <h3>Real Madrid + Mais de 2.5</h3>
-                <p>Parlay exclusivo disponível até o início da partida.</p>
-                <div class="boost-odds">
-                  <span class="old-odds">3.40</span>
-                  <span class="new-odds">5.10</span>
-                </div>
-                <button class="btn primary small" type="button">Adicionar</button>
-              </article>
-              <article class="boost-card" data-animate="fade-up">
-                <span class="boost-label">+20%</span>
-                <h3>Vitória do Flamengo</h3>
-                <p>Válido para apostas simples até R$ 50 com cashout habilitado.</p>
-                <div class="boost-odds">
-                  <span class="old-odds">1.80</span>
-                  <span class="new-odds">2.16</span>
-                </div>
-                <button class="btn primary small" type="button">Adicionar</button>
-              </article>
-            </div>
-          </section>
-
-          <section class="event-group panel" aria-labelledby="agenda-dia">
-            <header class="group-header">
-              <div>
-                <h2 id="agenda-dia">Agenda do dia</h2>
-                <p>Não perca as partidas que você acompanha.</p>
-              </div>
-              <button class="link-button" type="button">Exportar</button>
-            </header>
-            <ul class="upcoming-list">
-              <li>
-                <div>
-                  <span class="upcoming-time">18:00</span>
-                  <strong>Palmeiras x São Paulo</strong>
-                  <span class="upcoming-league">Copa do Brasil &bull; Quartas</span>
-                </div>
-                <button class="odd-pill" type="button">Ver mercados</button>
-              </li>
-              <li>
-                <div>
-                  <span class="upcoming-time">19:30</span>
-                  <strong>Boston Celtics x Miami Heat</strong>
-                  <span class="upcoming-league">NBA &bull; Jogo 5</span>
-                </div>
-                <button class="odd-pill" type="button">Adicionar ao bilhete</button>
-              </li>
-              <li>
-                <div>
-                  <span class="upcoming-time">21:00</span>
-                  <strong>River Plate x Nacional</strong>
-                  <span class="upcoming-league">Libertadores &bull; Grupo D</span>
-                </div>
-                <button class="odd-pill" type="button">Pré-live</button>
-              </li>
-            </ul>
           </section>
         </div>
 
-        <aside class="dashboard-right" aria-label="Resumo da conta e bilhete">
-          <section class="betslip panel" aria-labelledby="bilhete-titulo">
-            <header class="betslip-header">
-              <h2 id="bilhete-titulo">Bilhete rápido</h2>
-              <span class="betslip-count">2 seleções</span>
+        <aside class="shell-right" aria-label="Bilhete e destaques">
+          <section class="panel betslip" aria-live="polite">
+            <header class="betslip__header">
+              <div>
+                <h2>Meu bilhete</h2>
+                <span class="betslip__label">3 seleções • Multiplicador 12.5x</span>
+              </div>
+              <div class="betslip__status">
+                <span class="tag boost">cashout on</span>
+                <button class="link-button" type="button">Limpar tudo</button>
+              </div>
             </header>
-            <div class="betslip-selections">
-              <article class="selection">
-                <div>
-                  <span class="selection-league">Brasileirão Série B</span>
-                  <strong class="selection-match">Sport x Ceará</strong>
-                  <span class="selection-market">Vitória do Sport</span>
+            <div class="betslip__list">
+              <article class="betslip-item">
+                <div class="betslip-item__head">
+                  <span class="tag live">ao vivo</span>
+                  <button class="betslip-remove" type="button" aria-label="Remover seleção">
+                    &times;
+                  </button>
                 </div>
-                <button class="remove-selection" type="button" aria-label="Remover seleção">&times;</button>
+                <h3>Fluminense x Boca Juniors</h3>
+                <p class="betslip-market">Resultado final &mdash; Boca Juniors</p>
+                <div class="betslip-odd">
+                  <span>Cota</span>
+                  <strong>3.25</strong>
+                </div>
               </article>
-              <article class="selection">
-                <div>
-                  <span class="selection-league">Premier League</span>
-                  <strong class="selection-match">Arsenal x Newcastle</strong>
-                  <span class="selection-market">Mais de 2.5 gols</span>
-                </div>
-                <button class="remove-selection" type="button" aria-label="Remover seleção">&times;</button>
-              </article>
-            </div>
-            <div class="betslip-stake">
-              <label for="stake" class="stake-label">Valor da aposta</label>
-              <div class="stake-control">
-                <button type="button" class="stake-adjust">-</button>
-                <input id="stake" type="number" value="50" min="10" step="10" />
-                <button type="button" class="stake-adjust">+</button>
-              </div>
-              <div class="stake-summary">
-                <div>
-                  <span>Retorno potencial</span>
-                  <strong>R$ 612,50</strong>
-                </div>
-                <div>
-                  <span>Cashout disponível</span>
-                  <strong>R$ 128,40</strong>
-                </div>
-              </div>
-              <button class="btn primary full" type="button">Confirmar aposta</button>
-            </div>
-          </section>
 
-          <section class="account panel">
-            <h2>Resumo da conta</h2>
-            <dl class="account-stats">
+              <article class="betslip-item">
+                <div class="betslip-item__head">
+                  <span class="tag">próximo jogo</span>
+                  <button class="betslip-remove" type="button" aria-label="Remover seleção">
+                    &times;
+                  </button>
+                </div>
+                <h3>Arsenal x Manchester City</h3>
+                <p class="betslip-market">Ambos marcam &mdash; Sim</p>
+                <div class="betslip-odd">
+                  <span>Cota</span>
+                  <strong>1.85</strong>
+                </div>
+              </article>
+
+              <article class="betslip-item">
+                <div class="betslip-item__head">
+                  <span class="tag">combo</span>
+                  <button class="betslip-remove" type="button" aria-label="Remover seleção">
+                    &times;
+                  </button>
+                </div>
+                <h3>LOUD x paiN Gaming</h3>
+                <p class="betslip-market">Total de mapas &mdash; Mais de 4.5</p>
+                <div class="betslip-odd">
+                  <span>Cota</span>
+                  <strong>2.75</strong>
+                </div>
+              </article>
+            </div>
+
+            <div class="betslip__stake">
+              <label for="stake-input" class="stake-label">Valor da aposta</label>
+              <div class="stake-control">
+                <button class="stake-adjust" type="button" aria-label="Diminuir valor">-</button>
+                <input id="stake-input" type="number" value="50" min="0" step="5" />
+                <button class="stake-adjust" type="button" aria-label="Aumentar valor">+</button>
+              </div>
+              <div class="betslip__quick" aria-label="Atalhos de valor">
+                <button class="quick-amount" type="button">R$ 20</button>
+                <button class="quick-amount" type="button">R$ 50</button>
+                <button class="quick-amount" type="button">R$ 100</button>
+                <button class="quick-amount" type="button">R$ 250</button>
+              </div>
+            </div>
+
+            <dl class="betslip__totals">
               <div>
-                <dt>Vencidas hoje</dt>
-                <dd>7</dd>
+                <dt>Retorno potencial</dt>
+                <dd>R$ 3.006,25</dd>
               </div>
               <div>
-                <dt>Apostas abertas</dt>
-                <dd>4</dd>
-              </div>
-              <div>
-                <dt>Cashout realizados</dt>
-                <dd>2</dd>
+                <dt>Lucro estimado</dt>
+                <dd>R$ 2.956,25</dd>
               </div>
             </dl>
-            <a class="link-button" href="#">Ver extrato completo</a>
+
+            <button class="btn primary full" type="button">Confirmar aposta</button>
+            <p class="betslip__disclaimer">Cashout disponível até os 70' do jogo de futebol.</p>
           </section>
 
-          <section class="support panel">
-            <h2>Suporte dedicado</h2>
-            <p>Estamos online 24 horas para tirar dúvidas e acompanhar suas apostas.</p>
+          <section class="panel highlight-card" data-animate="fade-up">
+            <span class="section-badge">Super boost do dia</span>
+            <h2>3 seleções ao vivo com +20% de lucro</h2>
+            <p>
+              Combine qualquer trio de partidas com streaming e receba um multiplicador adicional
+              automático.
+            </p>
+            <button class="btn ghost full" type="button">Ver regulamento</button>
+          </section>
+
+          <section class="panel support-card" data-animate="fade-up">
+            <h2>Central de suporte</h2>
+            <p>Equipe disponível 24h para tirar dúvidas sobre depósitos, apostas e verificação.</p>
             <div class="support-actions">
-              <button class="btn primary small" type="button">Abrir chat</button>
-              <button class="btn ghost small" type="button">Central de ajuda</button>
+              <button class="chip" type="button">Chat ao vivo</button>
+              <button class="chip" type="button">WhatsApp</button>
+              <button class="chip" type="button">Telegram</button>
             </div>
           </section>
         </aside>
